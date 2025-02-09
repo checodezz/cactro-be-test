@@ -1,0 +1,30 @@
+# Node.js dependencies
+/node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv environment files
+.env
+
+# build output
+/dist
+/build
+
+# IDE/editor specific files
+/.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional: if you're using a package manager like Yarn, add this
+/yarn.lock
+
+# Optional: if you're using a lockfile like npm's package-lock.json, you can exclude it
+# package-lock.json
