@@ -39,7 +39,6 @@ app.get("/cache/:key", (req, res) => {
   return res.status(200).json({ key, value: cache.get(key) });
 });
 
-// DELETE /cache/:key - Remove a specific key-value pair from the cache
 app.delete("/cache/:key", (req, res) => {
   const key = req.params.key;
   if (!cache.has(key)) {
@@ -49,7 +48,6 @@ app.delete("/cache/:key", (req, res) => {
   return res.status(200).json({ message: "Key removed from cache." });
 });
 
-// DELETE /cache/key - Clear the entire cache
 app.delete("/cache/key", (req, res) => {
   cache.clear();
   return res.status(200).json({ message: "All cache items cleared." });
@@ -64,7 +62,6 @@ app.get("/cache", (req, res) => {
     return res.status(200).json({ cache: allCache });
   });
 
-// Start the server on port 3000
 app.listen(process.env.PORT || 3000, () => {
   console.log("Server is running on port", process.env.PORT || 3000);
 });
