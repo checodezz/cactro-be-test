@@ -63,7 +63,7 @@ app.get("/cache", (req, res) => {
   });
 
   app.get("/", (req, res) => {
-    return res.status(200).json({ message: "Welcome to cache API." });
+    return res.status(200).json({ message: "Welcome to Cactro cache API." });
   });
 
 app.listen(process.env.PORT || 3000, () => {
